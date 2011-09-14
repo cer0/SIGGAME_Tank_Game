@@ -1,0 +1,62 @@
+
+#
+# Filename: .gitignore
+# Date: 09/14/2011
+# Author: Armando Diaz
+#
+# Description:
+#	file to tell git which files to ignore when adding/commiting.
+#	uses regular expressions.
+#
+
+# Windows Temp Cache files
+[Tt]humbs.db
+*.DS_Store
+
+# 
+# Visual Studio Files
+#
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+
+#
+# this file cannot be opened for some reason
+#
+*.opensdf
+*.sdf
+
+#
+#Tooling stuff, not sure what these are for, web resources suggest they're not needed
+#
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+
+#
+#Project files
+#
+[Bb]uild/
+
+# end of file

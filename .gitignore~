@@ -1,0 +1,8 @@
+#
+# Filename: .gitignore
+# Date: 09/14/2011
+# Author: Armando Diaz
+#
+# Description:
+#	file to tell git which files to ignore when adding/commiting.
+#	uses regular expressions.

@@ -70,8 +70,14 @@
     <ClCompile Include="program.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="component.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="objectstats.h" />
+    <ClInclude Include="physicssubsystem.h" />
     <ClInclude Include="precomp.h" />
     <ClInclude Include="program.h" />
+    <ClInclude Include="subsystem.h" />
+    <ClInclude Include="tank.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

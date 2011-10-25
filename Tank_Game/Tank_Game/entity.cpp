@@ -11,6 +11,7 @@
 
 #include "precomp.h"
 #include "entity.h"
+#include "component.h"
 
 void Entity::clearComponents() //  THIS IS A MEMORY LEAK, WILL NEED TO BE FIXED LATER
 {
@@ -38,10 +39,4 @@ void Entity::setComponent( Component* newComponent )
 		delete oldComponent ; 
 
 	componentMap[ newComponent->getSubsystemType() ] = newComponent ;
-}
-
-
-Component::Component()
-{
-
 }

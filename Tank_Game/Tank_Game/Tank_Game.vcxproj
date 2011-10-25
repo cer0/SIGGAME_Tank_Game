@@ -63,6 +63,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="component.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="precomp.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

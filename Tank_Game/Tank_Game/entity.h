@@ -16,13 +16,16 @@
 #define ENTITY_H
 
 #include "precomp.h"
+#include "component.h"
 #include <map>
 
-typedef std::string entityTypeID ; // used to name entities ex: "Tank", "Missile"
-typedef std::string componentTypeID ;
+typedef std::string entityTypeID ;						// used to name entities ex: "Tank", "Missile"
+
+
+typedef std::string componentTypeID ;			// these had to be redeclared for compiler to be happy :)
 typedef std::string componentSubsystemID ;
 
-class Component ;
+class Component ;											// forward declaring the component class because of inter-depedence 
 
 
 class Entity
@@ -45,47 +48,6 @@ public:
 	Component* getComponent( const componentSubsystemID& componentName );
 	void setComponent( Component* newComponent ) ;
 	void clearComponents() ;
-
-};
-
-
-//#endif
-/* =============================================================================
-*
-*			file name :			component.h
-*			\authors :				Armando Diaz T.
-*			\brief :					The base class to all game Components.
-*
-*			\details :				component.h will be subclassed to create 
-*										actual components used to makeup entities.
-*										Each component has a ComponentTypeID
-*										( called "typeName" ) used to identify the
-*										specific type of component. Each 
-*										component belongs to a subsystem, and is
-*										indicated by the subsystemID member.
-*
-===============================================================================
-*/ 
-//#ifndef COMPONENT_H
-//#define COMPONENT_H
-
-
-class Component
-{
-protected:
-	componentTypeID typeName ;
-	componentSubsystemID subsystemID ;
-	Entity* componentOwner ;									// which entity is the component assigned to 
-
-public:
-	Component() ;				
-	~Component()  { }								// force us to create a destructor for subclasses
-	virtual void update() {}										// update component's state
-
-	void setOwner( Entity* newOwner ) { componentOwner = newOwner  ; };
-	Entity* getOwner() { return componentOwner ; }
-
-	componentSubsystemID& getSubsystemType() { return subsystemID ; } 
 
 };
 

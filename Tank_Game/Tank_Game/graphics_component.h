@@ -16,7 +16,8 @@
 #define GRAPHICS_COMPONENT_H
 
 #include "precomp.h"
-#include "entity.h"
+//#include "entity.h"
+#include "component.h"
 class GraphicsComponent : Component
 {
 	// INSERT CODE FOR GRAPHICS CONTEXT LATER !!!!

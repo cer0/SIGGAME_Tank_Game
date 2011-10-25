@@ -63,21 +63,27 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="entity.cpp" />
     <ClCompile Include="precomp.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="program.cpp" />
+    <ClCompile Include="visual_window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component.h" />
     <ClInclude Include="entity.h" />
+    <ClInclude Include="graphics_component.h" />
     <ClInclude Include="objectstats.h" />
+    <ClInclude Include="physicsComponents.h" />
     <ClInclude Include="physicssubsystem.h" />
     <ClInclude Include="precomp.h" />
     <ClInclude Include="program.h" />
     <ClInclude Include="subsystem.h" />
     <ClInclude Include="tank.h" />
+    <ClInclude Include="visual_window.h" />
+    <ClInclude Include="world.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

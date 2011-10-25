@@ -2,6 +2,7 @@
 #pragma once
 
 #include <vector>
+#include <iostream>
 #include <ClanLib/core.h>
 #include <ClanLib/display.h>
 #include <ClanLib/swrender.h>

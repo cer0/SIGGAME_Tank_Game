@@ -13,7 +13,7 @@
 #include "precomp.h"
 #include "visual_window.h"
 
-VisualWindow::VisualWindow()
+VisualWindow::VisualWindow() : GraphicsComponent()
 {
 	CL_DisplayWindowDescription desc;
 	desc.set_title("Tank Game");

@@ -29,9 +29,4 @@ public:
 	void update() { } ;
 };
 
-GraphicsComponent::GraphicsComponent()
-{
-	this->subsystemID = "GraphicsComponent" ; 
-}
-
 #endif

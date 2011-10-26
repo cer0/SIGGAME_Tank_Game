@@ -65,12 +65,14 @@
   <ItemGroup>
     <ClCompile Include="component.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="graphics_component.cpp" />
     <ClCompile Include="precomp.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="program.cpp" />
     <ClCompile Include="visual_window.cpp" />
+    <ClCompile Include="world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component.h" />

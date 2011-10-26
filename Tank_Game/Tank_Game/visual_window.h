@@ -22,7 +22,7 @@ private:
 	bool windowAliveBool ;
 
 public:
-	VisualWindow() ;
+	VisualWindow()  ;
 	~VisualWindow() { } ; 
 	void createWindow() { window = new CL_DisplayWindow(  windowDescription ) ; } // maybe remove this line later
 	void setWindowDescription( CL_DisplayWindowDescription& desc ) { windowDescription = desc ; }

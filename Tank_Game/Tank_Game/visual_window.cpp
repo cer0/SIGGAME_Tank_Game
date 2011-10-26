@@ -2,10 +2,8 @@
 *
 *			file name :			visual_window.cpp	
 *			\authors :				Armando Diaz T.
-*			created :				
-*			\brief :					
-*
-*			\details :				
+*			\brief :					implementation file for the VisualWindow class
+*										methods found in visual_window.h
 *
 ===============================================================================
 */
@@ -13,6 +11,10 @@
 #include "precomp.h"
 #include "visual_window.h"
 
+
+/*** VisualWindow() *******************************************************************
+*		Creates a window with default values. These defaults will probably be changed in the future	
+***********************************************************************************/
 VisualWindow::VisualWindow() : GraphicsComponent()
 {
 	CL_DisplayWindowDescription desc;
@@ -27,8 +29,11 @@ VisualWindow::VisualWindow() : GraphicsComponent()
 
 }
 
+/*** setWindowCloseSignal() *******************************************************************
+*		Creates a slot that will allowing the onWindowClose() method to run when the user 
+*		decides to exit
+***********************************************************************************/
 void VisualWindow::setWindowCloseSignal()
 {
-	// Connect the Window close event
 	CL_Slot slot_quit = window->sig_window_close().connect(this, &VisualWindow::onWindowClose );
 }

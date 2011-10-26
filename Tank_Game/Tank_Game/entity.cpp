@@ -2,9 +2,7 @@
 *
 *			file name :			entity.cpp	
 *			\authors :				Armando Diaz T.
-*			\brief :					
-*
-*			\details :				
+*			\brief :					contains implementation of Entity class methods
 *
 ===============================================================================
 */

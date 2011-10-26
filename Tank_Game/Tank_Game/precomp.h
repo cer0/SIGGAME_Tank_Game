@@ -10,3 +10,4 @@
 #include <ClanLib/sound.h>
 #include <ClanLib/vorbis.h>
 #include <ClanLib/network.h>
+#include <exception>

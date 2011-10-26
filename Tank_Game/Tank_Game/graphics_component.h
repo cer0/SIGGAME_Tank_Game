@@ -1,14 +1,14 @@
 /* =============================================================================
 *
-*			file name :			entity.h
+*			file name :			graphics_component.h	
 *			\authors :				Armando Diaz T.
-*			\brief :					The Entity class is a base class to all game objects.
+*			\brief :					The base class for all components
+*										 involved with rendering entities on screen.
 *
-*			\details :				Each subclass of Entity.h is uniquely identified by the field
-*										"type" which is a typecasted std::string. To avoid naming conflicts,
-*										each subclass should have a type name equal to its class name.
-*										The field "entityID" uniquely identifies each game entity, and 
-*										is assigned by external code.
+*			\details :				Will encapsulate the graphics context ( a ClanLib mechanism for
+*										drawing stuff), which components will use to draw sprites and
+*										other graphics. The common interface for all graphics components
+*										will be the render() method.
 *
 ===============================================================================
 */ 
@@ -20,12 +20,12 @@
 #include "component.h"
 class GraphicsComponent : Component
 {
-	// INSERT CODE FOR GRAPHICS CONTEXT LATER !!!!
+	// WILL INSERT CODE FOR GRAPHICS CONTEXT LATER !!!!
 public:  
 	GraphicsComponent();
 	~GraphicsComponent() { }  ;
 
-	void render() ;
+	void render() ;					// these methods will be overridden by derived classes
 	void update() { } ;
 };
 

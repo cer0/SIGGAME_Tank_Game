@@ -22,10 +22,10 @@
 typedef std::string entityTypeID ;						// used to name entities ex: "Tank", "Missile"
 
 
-typedef std::string componentTypeID ;			// these had to be redeclared for compiler to be happy :)
+typedef std::string componentTypeID ;				// these had to be redeclared for compiler to be happy :)
 typedef std::string componentSubsystemID ;
 
-class Component ;											// forward declaring the component class because of inter-depedence 
+class Component ;												// forward declaring the component class because of inter-depedence 
 
 
 class Entity
@@ -33,18 +33,18 @@ class Entity
 private:
 		long int entityID ;
 		entityTypeID type ; 
-protected:												// subclasses must have access to map
+protected:															// subclasses must have access to map so it's not private 
 		std::map< const componentSubsystemID, Component* > componentMap ;
 
 public:
 	const entityTypeID& getEntityType() const { return type ; }
-	// we're not allowing an object to change it's type right now
+	/* we're not allowing an object to change it's type right now, so there is not corresponding setter method */
 
-	// accessing the entity id
+																		// accessing the entity id
 	void setEntityID( long int newEntityID ) { entityID = newEntityID ; }
 	long getEntityID() { return entityID ; } 
 
-	// accessing Components
+																		// accessing Components
 	Component* getComponent( const componentSubsystemID& componentName );
 	void setComponent( Component* newComponent ) ;
 	void clearComponents() ;
